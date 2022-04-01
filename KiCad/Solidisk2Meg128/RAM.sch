@@ -803,6 +803,18 @@ Wire Wire Line
 	8150 650  9450 650 
 Wire Wire Line
 	9450 650  9450 1100
+Connection ~ 8150 650 
+$Comp
+L power:GND #PWR?
+U 1 1 62C63B5E
+P 9450 1100
+F 0 "#PWR?" H 9450 850 50  0001 C CNN
+F 1 "GND" H 9455 927 50  0000 C CNN
+F 2 "" H 9450 1100 50  0001 C CNN
+F 3 "" H 9450 1100 50  0001 C CNN
+	1    9450 1100
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	3300 3850 3300 4750
 Wire Bus Line
@@ -829,16 +841,4 @@ Wire Bus Line
 	9250 1800 9250 3500
 Wire Bus Line
 	7000 4250 7000 6200
-Connection ~ 8150 650 
-$Comp
-L power:GND #PWR?
-U 1 1 62C63B5E
-P 9450 1100
-F 0 "#PWR?" H 9450 850 50  0001 C CNN
-F 1 "GND" H 9455 927 50  0000 C CNN
-F 2 "" H 9450 1100 50  0001 C CNN
-F 3 "" H 9450 1100 50  0001 C CNN
-	1    9450 1100
-	1    0    0    -1  
-$EndComp
 $EndSCHEMATC

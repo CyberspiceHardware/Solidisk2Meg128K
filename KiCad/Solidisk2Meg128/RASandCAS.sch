@@ -4,8 +4,8 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 7
-Title ""
-Date ""
+Title "Solidisk 128 - Dynamic RAM CAS and RAS generation"
+Date "2022-04-01"
 Rev ""
 Comp ""
 Comment1 ""
@@ -29,17 +29,16 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 62C2043A
-P 6650 4900
-F 0 "#PWR?" H 6650 4650 50  0001 C CNN
-F 1 "GND" H 6655 4727 50  0000 C CNN
-F 2 "" H 6650 4900 50  0001 C CNN
-F 3 "" H 6650 4900 50  0001 C CNN
-	1    6650 4900
+P 7200 4900
+F 0 "#PWR?" H 7200 4650 50  0001 C CNN
+F 1 "GND" H 7205 4727 50  0000 C CNN
+F 2 "" H 7200 4900 50  0001 C CNN
+F 3 "" H 7200 4900 50  0001 C CNN
+	1    7200 4900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6650 4400 6650 4900
-Connection ~ 6650 4400
+	7200 4400 7200 4900
 Wire Wire Line
 	7200 4400 6650 4400
 Wire Wire Line
@@ -49,12 +48,7 @@ Wire Wire Line
 Wire Wire Line
 	6700 4050 6650 4050
 Wire Wire Line
-	5500 4600 5750 4600
-Wire Wire Line
-	6450 3450 6450 4500
-Connection ~ 5600 3050
-Wire Wire Line
-	5600 3050 5600 4400
+	5500 3550 5750 3550
 Wire Wire Line
 	5000 3750 6650 3750
 Wire Wire Line
@@ -69,13 +63,8 @@ Text GLabel 10150 2100 2    50   Input ~ 0
 U2P3
 Wire Wire Line
 	6450 3150 6700 3150
-Connection ~ 6450 3150
 Wire Wire Line
 	6450 2100 10150 2100
-Wire Wire Line
-	6450 3150 6450 2100
-Wire Wire Line
-	6400 3150 6450 3150
 Connection ~ 6650 3350
 Wire Wire Line
 	6650 3050 6650 3350
@@ -88,10 +77,6 @@ Wire Wire Line
 	6650 3350 6650 3750
 Wire Wire Line
 	6700 3350 6650 3350
-Wire Wire Line
-	5600 1900 5600 3050
-Wire Wire Line
-	2000 4150 1800 4150
 $Comp
 L TTL_74xx:74HC123 U?
 U 2 1 62A0AC8B
@@ -136,25 +121,17 @@ Wire Wire Line
 Connection ~ 4300 3750
 Wire Wire Line
 	4300 3750 4300 3850
-Wire Wire Line
-	1850 2750 2000 2750
-Text GLabel 5450 3250 0    50   Input ~ 0
+Text GLabel 5500 2900 0    50   Input ~ 0
 ~SRAM
 Wire Wire Line
-	5800 3250 5450 3250
-Wire Wire Line
-	6700 3950 4900 3950
+	6700 3950 5650 3950
 Wire Wire Line
 	8650 3050 10150 3050
 Connection ~ 8650 3050
 Wire Wire Line
 	8650 4500 8650 3050
 Wire Wire Line
-	6550 4500 8650 4500
-Wire Wire Line
-	6550 3650 6550 4500
-Wire Wire Line
-	6700 3650 6550 3650
+	6450 3650 6450 4500
 Text GLabel 10150 3050 2    50   Input ~ 0
 ~CAS1
 Wire Wire Line
@@ -209,19 +186,13 @@ F 3 "~" H 8100 3050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5750 4400 5600 4400
-Wire Wire Line
-	6450 4500 6350 4500
-Wire Wire Line
-	6700 3450 6450 3450
-Wire Wire Line
-	5800 3050 5600 3050
+	5750 3350 5600 3350
 $Comp
 L TTL_74xx:74LS157 U3
 U 1 1 6297AE35
 P 7200 3350
-F 0 "U3" H 7200 4431 50  0000 C CNN
-F 1 "74LS157" H 7200 4340 50  0000 C CNN
+F 0 "U3" H 7550 4300 50  0000 C CNN
+F 1 "74LS157" H 7550 4200 50  0000 C CNN
 F 2 "" H 7200 3350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS157" H 7200 3350 50  0001 C CNN
 	1    7200 3350
@@ -230,30 +201,111 @@ $EndComp
 $Comp
 L TTL_74xx:74LS32 U2
 U 4 1 62971D52
-P 6050 4500
-F 0 "U2" H 6050 4150 50  0000 C CNN
-F 1 "74LS32" H 6050 4250 50  0000 C CNN
-F 2 "" H 6050 4500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 6050 4500 50  0001 C CNN
-	4    6050 4500
+P 6050 3450
+F 0 "U2" H 6050 3100 50  0000 C CNN
+F 1 "74LS32" H 6050 3200 50  0000 C CNN
+F 2 "" H 6050 3450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 6050 3450 50  0001 C CNN
+	4    6050 3450
 	1    0    0    1   
 $EndComp
 $Comp
 L TTL_74xx:74LS32 U2
 U 1 1 6295E33B
-P 6100 3150
-F 0 "U2" H 6100 3475 50  0000 C CNN
-F 1 "74LS32" H 6100 3384 50  0000 C CNN
-F 2 "" H 6100 3150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 6100 3150 50  0001 C CNN
-	1    6100 3150
+P 6050 2800
+F 0 "U2" H 6050 3125 50  0000 C CNN
+F 1 "74LS32" H 6050 3034 50  0000 C CNN
+F 2 "" H 6050 2800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 6050 2800 50  0001 C CNN
+	1    6050 2800
 	1    0    0    -1  
 $EndComp
-Text GLabel 5500 4600 0    50   Input ~ 0
+Text GLabel 5500 3550 0    50   Input ~ 0
 ~SRAMH
 Wire Wire Line
 	8450 1900 5600 1900
 Connection ~ 8450 3650
 Wire Wire Line
 	8450 3650 10150 3650
+Wire Wire Line
+	5600 1900 5600 2700
+Wire Wire Line
+	5600 2700 5750 2700
+Wire Wire Line
+	6350 3450 6700 3450
+Wire Wire Line
+	6450 2100 6450 2800
+Connection ~ 5600 2700
+Wire Wire Line
+	5600 2700 5600 3350
+Wire Wire Line
+	5750 2900 5500 2900
+Wire Wire Line
+	6350 2800 6450 2800
+Connection ~ 6450 2800
+Wire Wire Line
+	6450 2800 6450 3150
+Wire Wire Line
+	6450 3650 6700 3650
+Wire Wire Line
+	6450 4500 8650 4500
+Text GLabel 1150 3400 0    50   Input ~ 0
+PHI2
+Wire Wire Line
+	1550 2750 1550 3400
+Connection ~ 1550 3400
+Wire Wire Line
+	1550 4250 1550 4750
+Wire Wire Line
+	5650 4750 5650 3950
+Wire Wire Line
+	7200 2450 7200 1550
+Connection ~ 7200 4400
+$Comp
+L power:+5V #PWR?
+U 1 1 62485D9F
+P 7200 1550
+F 0 "#PWR?" H 7200 1400 50  0001 C CNN
+F 1 "+5V" H 7215 1723 50  0000 C CNN
+F 2 "" H 7200 1550 50  0001 C CNN
+F 3 "" H 7200 1550 50  0001 C CNN
+	1    7200 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 3400 1550 4250
+Wire Wire Line
+	1850 4150 2000 4150
+Wire Wire Line
+	1850 3950 1850 4150
+Wire Wire Line
+	1150 3400 1550 3400
+Wire Wire Line
+	1550 2750 2000 2750
+Connection ~ 1550 4250
+Wire Wire Line
+	1550 4250 2000 4250
+Wire Wire Line
+	1550 4750 5650 4750
+Wire Wire Line
+	2000 3950 1850 3950
+Wire Wire Line
+	2000 2550 1850 2550
+Wire Wire Line
+	1850 4150 1850 5000
+Connection ~ 1850 4150
+$Comp
+L power:GND #PWR?
+U 1 1 624A1747
+P 1850 5000
+F 0 "#PWR?" H 1850 4750 50  0001 C CNN
+F 1 "GND" H 1855 4827 50  0000 C CNN
+F 2 "" H 1850 5000 50  0001 C CNN
+F 3 "" H 1850 5000 50  0001 C CNN
+	1    1850 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2550 1850 3950
+Connection ~ 1850 3950
 $EndSCHEMATC

@@ -695,6 +695,10 @@ Text Label 2650 5200 0    50   ~ 0
 ROM1
 Wire Wire Line
 	2900 5500 2250 5500
+Text GLabel 2250 4550 0    50   Input ~ 0
+~ROMOE
+Text GLabel 2250 5500 0    50   Input ~ 0
+~ROMCS
 Wire Bus Line
 	2450 5000 2450 5200
 Wire Bus Line
@@ -713,8 +717,4 @@ Wire Bus Line
 	6250 2050 6250 4300
 Wire Bus Line
 	8100 2050 8100 4300
-Text GLabel 2250 4550 0    50   Input ~ 0
-~ROMOE
-Text GLabel 2250 5500 0    50   Input ~ 0
-~ROMCS
 $EndSCHEMATC

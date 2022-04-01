@@ -4,8 +4,8 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 7
-Title ""
-Date ""
+Title "Solidisk 128 - Configuration latches and associated logic"
+Date "2022-04-01"
 Rev ""
 Comp ""
 Comment1 ""
@@ -60,8 +60,8 @@ U 1 1 62967F22
 P 5250 1750
 AR Path="/623840EF/62967F22" Ref="U?"  Part="1" 
 AR Path="/6296102F/62967F22" Ref="U16"  Part="1" 
-F 0 "U16" H 5250 2531 50  0000 C CNN
-F 1 "74LS138" H 5250 2440 50  0000 C CNN
+F 0 "U16" H 5500 2400 50  0000 C CNN
+F 1 "74LS138" H 5500 2300 50  0000 C CNN
 F 2 "" H 5250 1750 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 5250 1750 50  0001 C CNN
 	1    5250 1750
@@ -73,8 +73,8 @@ U 1 1 6299E740
 P 4100 4050
 AR Path="/623840EF/6299E740" Ref="U?"  Part="1" 
 AR Path="/6296102F/6299E740" Ref="U20"  Part="1" 
-F 0 "U20" H 4100 5031 50  0000 C CNN
-F 1 "74LS163" H 4100 4940 50  0000 C CNN
+F 0 "U20" H 4400 4850 50  0000 C CNN
+F 1 "74LS163" H 4400 4750 50  0000 C CNN
 F 2 "" H 4100 4050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS163" H 4100 4050 50  0001 C CNN
 	1    4100 4050
@@ -146,9 +146,9 @@ L Connector_Generic:Conn_01x03 J?
 U 1 1 629ABC71
 P 9200 4650
 AR Path="/623840EF/629ABC71" Ref="J?"  Part="1" 
-AR Path="/6296102F/629ABC71" Ref="J?"  Part="1" 
-F 0 "J?" H 9280 4692 50  0000 L CNN
-F 1 "Conn_01x03" H 9280 4601 50  0000 L CNN
+AR Path="/6296102F/629ABC71" Ref="CON2"  Part="1" 
+F 0 "CON2" H 9280 4692 50  0000 L CNN
+F 1 "PinHdr" H 9280 4601 50  0000 L CNN
 F 2 "" H 9200 4650 50  0001 C CNN
 F 3 "~" H 9200 4650 50  0001 C CNN
 	1    9200 4650
@@ -183,8 +183,8 @@ $Comp
 L TTL_74xx:74LS74 U19
 U 1 1 62A2F87F
 P 4000 5950
-F 0 "U19" H 4000 6431 50  0000 C CNN
-F 1 "74LS74" H 4000 6340 50  0000 C CNN
+F 0 "U19" H 4250 6350 50  0000 C CNN
+F 1 "74LS74" H 4250 6250 50  0000 C CNN
 F 2 "" H 4000 5950 50  0001 C CNN
 F 3 "74xx/74hc_hct74.pdf" H 4000 5950 50  0001 C CNN
 	1    4000 5950
@@ -219,8 +219,8 @@ $EndComp
 Connection ~ 8300 5100
 Wire Bus Line
 	8300 5100 9450 5100
-Text Notes 8100 4400 0    50   ~ 0
-Connection to LS139 on BBC Motherboard
+Text Notes 9650 4700 0    50   ~ 0
+Connection to LS139 on\nBBC Motherboard
 Wire Wire Line
 	4750 2050 4550 2050
 Wire Wire Line
@@ -247,8 +247,8 @@ $Comp
 L TTL_74xx:74LS74 U?
 U 2 1 62CC1A8E
 P 4000 6950
-F 0 "U?" H 4000 7431 50  0000 C CNN
-F 1 "74LS74" H 4000 7340 50  0000 C CNN
+F 0 "U?" H 4300 7350 50  0000 C CNN
+F 1 "74LS74" H 4300 7250 50  0000 C CNN
 F 2 "" H 4000 6950 50  0001 C CNN
 F 3 "74xx/74hc_hct74.pdf" H 4000 6950 50  0001 C CNN
 	2    4000 6950
@@ -272,10 +272,6 @@ Wire Wire Line
 	3400 5950 3700 5950
 Wire Wire Line
 	6050 1250 6050 1950
-Wire Wire Line
-	4850 5850 4300 5850
-Wire Wire Line
-	4850 5050 6050 5050
 Wire Wire Line
 	3400 6400 2750 6400
 Text GLabel 2750 6400 0    50   Input ~ 0
@@ -355,8 +351,6 @@ BA14
 Text GLabel 8500 3850 2    50   Output ~ 0
 BA15
 Wire Wire Line
-	4850 5050 4850 5850
-Wire Wire Line
 	4850 3750 4850 4850
 Wire Wire Line
 	5050 3850 5050 4550
@@ -420,7 +414,6 @@ Entry Wire Line
 	3200 1750 3300 1650
 Entry Wire Line
 	3200 2250 3300 2150
-Connection ~ 6050 5050
 Wire Wire Line
 	6050 5050 6350 5050
 Wire Wire Line
@@ -454,8 +447,8 @@ Wire Wire Line
 	4300 6850 5050 6850
 Wire Wire Line
 	4600 3850 5050 3850
-Text Notes 9850 3700 2    50   ~ 0
-Address lines back to BBC motherboard via socket
+Text Notes 8800 4050 0    50   ~ 0
+Address lines back to BBC\nmotherboard via CPU socket
 Wire Wire Line
 	3600 4550 3000 4550
 $Comp
@@ -495,6 +488,50 @@ Wire Wire Line
 Wire Wire Line
 	3650 7350 3300 7350
 Connection ~ 3650 7350
+Text Notes 8950 2900 0    50   ~ 0
+Selects Sideways RAM\nin banks 12-15
+Text Notes 6300 1100 0    50   ~ 0
+Selects Sideways RAM\nin banks 4-7
+Text Notes 6300 2350 0    50   ~ 0
+Selects Sidewas ROMs\nin banks 8-11
+Text Notes 6300 1700 0    50   ~ 0
+Selects Sideways ROMs\nin banks 0-3. Thes are on\nthe BBC Micro motherboard.
+Wire Wire Line
+	5250 6050 4900 6050
+Text GLabel 4900 6050 0    50   Input ~ 0
+MUX1
+$Comp
+L TTL_74xx:74LS00 U?
+U 3 1 62596950
+P 5550 5950
+AR Path="/623840EF/62596950" Ref="U?"  Part="3" 
+AR Path="/6296102F/62596950" Ref="U18"  Part="3" 
+AR Path="/62DE24C7/62596950" Ref="U?"  Part="3" 
+F 0 "U18" H 5550 6275 50  0000 C CNN
+F 1 "74LS00" H 5550 6184 50  0000 C CNN
+F 2 "" H 5550 5950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 5550 5950 50  0001 C CNN
+	3    5550 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 5850 5250 5850
+Wire Wire Line
+	6050 5050 6050 5950
+Wire Wire Line
+	6050 5950 5850 5950
+Connection ~ 6050 5050
+$Comp
+L power:GND #PWR?
+U 1 1 625A5491
+P 4100 5150
+F 0 "#PWR?" H 4100 4900 50  0001 C CNN
+F 1 "GND" H 4105 4977 50  0000 C CNN
+F 2 "" H 4100 5150 50  0001 C CNN
+F 3 "" H 4100 5150 50  0001 C CNN
+	1    4100 5150
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	3200 1750 3200 2900
 Wire Bus Line
@@ -505,4 +542,26 @@ Wire Bus Line
 	7800 4550 7800 5100
 Wire Bus Line
 	3200 3300 3200 6750
+$Comp
+L power:+5V #PWR?
+U 1 1 625A9F91
+P 4100 3250
+F 0 "#PWR?" H 4100 3100 50  0001 C CNN
+F 1 "+5V" H 4115 3423 50  0000 C CNN
+F 2 "" H 4100 3250 50  0001 C CNN
+F 3 "" H 4100 3250 50  0001 C CNN
+	1    4100 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 625AA8AB
+P 5250 1150
+F 0 "#PWR?" H 5250 1000 50  0001 C CNN
+F 1 "+5V" H 5265 1323 50  0000 C CNN
+F 2 "" H 5250 1150 50  0001 C CNN
+F 3 "" H 5250 1150 50  0001 C CNN
+	1    5250 1150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
