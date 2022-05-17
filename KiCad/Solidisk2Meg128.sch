@@ -3,12 +3,12 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 7
+Sheet 1 8
 Title ""
-Date ""
-Rev ""
+Date "2022-05-16"
+Rev "A1"
 Comp ""
-Comment1 ""
+Comment1 "Reverse engineer of Solidisk TwoMeg128 board"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -28,12 +28,6 @@ F0 "RAM" 50
 F1 "RAM.sch" 50
 $EndSheet
 $Sheet
-S 6950 3600 1700 1150
-U 623840EF
-F0 "RASandCAS" 50
-F1 "RASandCAS.sch" 50
-$EndSheet
-$Sheet
 S 2850 3600 1750 1150
 U 62DE24C7
 F0 "AddDecode" 50
@@ -46,9 +40,21 @@ F0 "CPU" 50
 F1 "CPU.sch" 50
 $EndSheet
 $Sheet
+S 2850 5150 1750 1100
+U 6284E359
+F0 "Power" 50
+F1 "Power.sch" 50
+$EndSheet
+$Sheet
 S 4900 3600 1700 1150
 U 6296102F
 F0 "LatchSelect" 50
 F1 "LatchSelect.sch" 50
+$EndSheet
+$Sheet
+S 6950 3600 1700 1150
+U 623840EF
+F0 "RASandCAS" 50
+F1 "RASandCAS.sch" 50
 $EndSheet
 $EndSCHEMATC

@@ -3,12 +3,12 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 7
+Sheet 5 8
 Title "Solidisk 128 - CPU and connection to BBC Micro"
-Date "2022-03-30"
-Rev ""
+Date "2022-05-16"
+Rev "A1"
 Comp ""
-Comment1 ""
+Comment1 "Reverse engineer of Solidisk TwoMeg128 board"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -19,7 +19,7 @@ U 1 1 625CD50A
 P 6250 3400
 F 0 "U22" H 6550 5100 50  0000 C CNN
 F 1 "6502" H 6550 5000 50  0000 C CIB
-F 2 "" H 6250 5400 50  0001 C CNN
+F 2 "Package_DIP:DIP-40_W15.24mm_Socket" H 6250 5400 50  0001 C CNN
 F 3 "http://www.6502.org/documents/datasheets/mos/mos_6500_mpu_mar_1980.pdf" H 6250 5300 50  0001 C CNN
 	1    6250 3400
 	1    0    0    -1  
@@ -30,7 +30,7 @@ U 1 1 625CF732
 P 3600 3500
 F 0 "CON1" H 3650 4617 50  0000 C CNN
 F 1 "Pins" H 3650 4526 50  0000 C CNN
-F 2 "" H 3600 3500 50  0001 C CNN
+F 2 "Package_DIP:DIP-40_W15.24mm_Socket" H 3600 3500 50  0001 C CNN
 F 3 "~" H 3600 3500 50  0001 C CNN
 	1    3600 3500
 	1    0    0    -1  
@@ -329,28 +329,17 @@ D6
 Text Label 6850 4600 0    50   ~ 0
 D7
 Wire Wire Line
-	6250 4950 6250 5000
-Wire Wire Line
-	6250 5000 6150 5000
-Wire Wire Line
-	6150 5000 6150 4950
-Wire Wire Line
-	6150 5000 6150 5350
-Wire Wire Line
 	3900 4500 3900 5350
-Connection ~ 6150 5000
-Wire Wire Line
-	3900 5350 3900 5500
 Connection ~ 3900 5350
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0108
 U 1 1 62603B41
-P 3900 5500
-F 0 "#PWR?" H 3900 5250 50  0001 C CNN
-F 1 "GND" H 3905 5327 50  0000 C CNN
-F 2 "" H 3900 5500 50  0001 C CNN
-F 3 "" H 3900 5500 50  0001 C CNN
-	1    3900 5500
+P 3900 5650
+F 0 "#PWR0108" H 3900 5400 50  0001 C CNN
+F 1 "GND" H 3905 5477 50  0000 C CNN
+F 2 "" H 3900 5650 50  0001 C CNN
+F 3 "" H 3900 5650 50  0001 C CNN
+	1    3900 5650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -365,10 +354,10 @@ Wire Wire Line
 	3250 1000 3250 900 
 Connection ~ 3250 1000
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0109
 U 1 1 62631A3A
 P 3250 900
-F 0 "#PWR?" H 3250 750 50  0001 C CNN
+F 0 "#PWR0109" H 3250 750 50  0001 C CNN
 F 1 "+5V" H 3265 1073 50  0000 C CNN
 F 2 "" H 3250 900 50  0001 C CNN
 F 3 "" H 3250 900 50  0001 C CNN
@@ -376,10 +365,10 @@ F 3 "" H 3250 900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG?
+L power:PWR_FLAG #FLG0101
 U 1 1 62631E9D
 P 3250 1000
-F 0 "#FLG?" H 3250 1075 50  0001 C CNN
+F 0 "#FLG0101" H 3250 1075 50  0001 C CNN
 F 1 "PWR_FLAG" V 3250 1127 50  0000 L CNN
 F 2 "" H 3250 1000 50  0001 C CNN
 F 3 "~" H 3250 1000 50  0001 C CNN
@@ -387,10 +376,10 @@ F 3 "~" H 3250 1000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG?
+L power:PWR_FLAG #FLG0102
 U 1 1 62632D10
 P 3900 5350
-F 0 "#FLG?" H 3900 5425 50  0001 C CNN
+F 0 "#FLG0102" H 3900 5425 50  0001 C CNN
 F 1 "PWR_FLAG" V 3900 5477 50  0000 L CNN
 F 2 "" H 3900 5350 50  0001 C CNN
 F 3 "~" H 3900 5350 50  0001 C CNN
@@ -505,11 +494,41 @@ BA14
 Text GLabel 2750 6000 0    50   Input ~ 0
 BA15
 Wire Wire Line
-	3900 5350 6150 5350
-Wire Wire Line
 	2750 6000 4200 6000
 Wire Wire Line
 	2750 6150 4100 6150
+Wire Wire Line
+	4650 2200 4650 1500
+Wire Wire Line
+	4650 1500 7450 1500
+Connection ~ 4650 2200
+Text GLabel 7450 1500 2    50   Output ~ 0
+~RES
+Wire Wire Line
+	2500 2600 3400 2600
+Wire Wire Line
+	6250 4950 6250 5350
+Wire Wire Line
+	3900 5350 6250 5350
+Wire Wire Line
+	6150 5050 2500 5050
+Wire Wire Line
+	6150 4950 6150 5050
+Wire Wire Line
+	2500 5050 2500 2600
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 62A77C51
+P 2500 2600
+F 0 "#FLG0103" H 2500 2675 50  0001 C CNN
+F 1 "PWR_FLAG" V 2500 2727 50  0000 L CNN
+F 2 "" H 2500 2600 50  0001 C CNN
+F 3 "~" H 2500 2600 50  0001 C CNN
+	1    2500 2600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3900 5350 3900 5650
 Wire Bus Line
 	4450 1250 4450 4300
 Wire Bus Line

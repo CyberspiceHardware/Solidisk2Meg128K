@@ -3,12 +3,12 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 7
+Sheet 4 8
 Title "Solidisk 128 - Address decoding logic"
-Date "2022-04-01"
-Rev ""
+Date "2022-05-16"
+Rev "A1"
 Comp ""
-Comment1 ""
+Comment1 "Reverse engineer of Solidisk TwoMeg128 board"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -21,7 +21,7 @@ AR Path="/623840EF/62DF122C" Ref="U?"  Part="1"
 AR Path="/62DE24C7/62DF122C" Ref="U17"  Part="1" 
 F 0 "U17" H 4750 2025 50  0000 C CNN
 F 1 "74LS02" H 4750 1934 50  0000 C CNN
-F 2 "" H 4750 1700 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4750 1700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 4750 1700 50  0001 C CNN
 	1    4750 1700
 	1    0    0    -1  
@@ -34,7 +34,7 @@ AR Path="/623840EF/62DF1232" Ref="U?"  Part="4"
 AR Path="/62DE24C7/62DF1232" Ref="U18"  Part="4" 
 F 0 "U18" H 3800 4475 50  0000 C CNN
 F 1 "74LS00" H 3800 4384 50  0000 C CNN
-F 2 "" H 3800 4150 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3800 4150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 3800 4150 50  0001 C CNN
 	4    3800 4150
 	1    0    0    -1  
@@ -51,7 +51,7 @@ AR Path="/623840EF/62DF123A" Ref="U?"  Part="1"
 AR Path="/62DE24C7/62DF123A" Ref="U18"  Part="1" 
 F 0 "U18" H 3800 3825 50  0000 C CNN
 F 1 "74LS00" H 3800 3734 50  0000 C CNN
-F 2 "" H 3800 3500 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3800 3500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 3800 3500 50  0001 C CNN
 	1    3800 3500
 	1    0    0    -1  
@@ -82,7 +82,7 @@ Wire Wire Line
 Wire Wire Line
 	4350 3150 4350 3500
 Connection ~ 4350 3500
-Text GLabel 4650 3500 2    50   Input ~ 0
+Text GLabel 4650 3500 2    50   Output ~ 0
 ~RAMWE
 Wire Wire Line
 	4350 3500 4650 3500
@@ -91,7 +91,7 @@ Wire Wire Line
 Connection ~ 4250 4150
 Wire Wire Line
 	4350 3150 4450 3150
-Text GLabel 4650 4150 2    50   Input ~ 0
+Text GLabel 4650 4150 2    50   Output ~ 0
 ~ROMOE
 Wire Wire Line
 	5050 2350 5200 2350
@@ -111,7 +111,7 @@ AR Path="/623840EF/62DF1259" Ref="U?"  Part="4"
 AR Path="/62DE24C7/62DF1259" Ref="U17"  Part="4" 
 F 0 "U17" H 4750 3375 50  0000 C CNN
 F 1 "74LS02" H 4750 3284 50  0000 C CNN
-F 2 "" H 4750 3050 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4750 3050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 4750 3050 50  0001 C CNN
 	4    4750 3050
 	1    0    0    -1  
@@ -124,7 +124,7 @@ AR Path="/623840EF/62DF125F" Ref="U?"  Part="2"
 AR Path="/62DE24C7/62DF125F" Ref="U17"  Part="2" 
 F 0 "U17" H 4750 2675 50  0000 C CNN
 F 1 "74LS02" H 4750 2584 50  0000 C CNN
-F 2 "" H 4750 2350 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4750 2350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 4750 2350 50  0001 C CNN
 	2    4750 2350
 	1    0    0    -1  
@@ -154,8 +154,8 @@ L power:+5V #PWR?
 U 1 1 62DF1276
 P 5450 3450
 AR Path="/6296102F/62DF1276" Ref="#PWR?"  Part="1" 
-AR Path="/62DE24C7/62DF1276" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5450 3300 50  0001 C CNN
+AR Path="/62DE24C7/62DF1276" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 5450 3300 50  0001 C CNN
 F 1 "+5V" H 5465 3623 50  0000 C CNN
 F 2 "" H 5450 3450 50  0001 C CNN
 F 3 "" H 5450 3450 50  0001 C CNN
@@ -174,7 +174,7 @@ AR Path="/6296102F/62DF127E" Ref="U?"  Part="1"
 AR Path="/62DE24C7/62DF127E" Ref="U15"  Part="1" 
 F 0 "U15" H 6150 4125 50  0000 C CNN
 F 1 "74LS00" H 6150 4034 50  0000 C CNN
-F 2 "" H 6150 3800 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6150 3800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 6150 3800 50  0001 C CNN
 	1    6150 3800
 	1    0    0    -1  
@@ -185,8 +185,6 @@ Text Label 6700 3600 0    50   ~ 0
 A2
 Wire Wire Line
 	6950 3600 6600 3600
-Wire Wire Line
-	6450 3800 6950 3800
 $Comp
 L TTL_74xx:74LS139 U?
 U 2 1 62DF1288
@@ -196,7 +194,7 @@ AR Path="/6296102F/62DF1288" Ref="U?"  Part="2"
 AR Path="/62DE24C7/62DF1288" Ref="U14"  Part="2" 
 F 0 "U14" H 7450 3967 50  0000 C CNN
 F 1 "74LS139" H 7450 3876 50  0000 C CNN
-F 2 "" H 7450 3600 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 7450 3600 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/sn74ls139a.pdf" H 7450 3600 50  0001 C CNN
 	2    7450 3600
 	1    0    0    -1  
@@ -210,7 +208,7 @@ AR Path="/6296102F/62DF128E" Ref="U?"  Part="2"
 AR Path="/62DE24C7/62DF128E" Ref="U18"  Part="2" 
 F 0 "U18" H 6150 2383 50  0000 C CNN
 F 1 "74LS00" H 6150 2474 50  0000 C CNN
-F 2 "" H 6150 2700 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6150 2700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 6150 2700 50  0001 C CNN
 	2    6150 2700
 	1    0    0    1   
@@ -229,7 +227,7 @@ Wire Wire Line
 	4250 1000 6600 1000
 Entry Wire Line
 	4150 900  4250 1000
-Text GLabel 8400 3600 2    50   Input ~ 0
+Text GLabel 8400 3600 2    50   Output ~ 0
 ~SHADOW
 Entry Wire Line
 	4150 1700 4250 1800
@@ -246,7 +244,7 @@ AR Path="/6296102F/6300F998" Ref="U?"  Part="3"
 AR Path="/62DE24C7/6300F998" Ref="U17"  Part="3" 
 F 0 "U17" H 6100 1775 50  0000 C CNN
 F 1 "74LS02" H 6100 1684 50  0000 C CNN
-F 2 "" H 6100 1450 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6100 1450 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 6100 1450 50  0001 C CNN
 	3    6100 1450
 	1    0    0    -1  
@@ -263,7 +261,7 @@ Wire Wire Line
 	8200 3500 8200 3300
 Wire Wire Line
 	8200 3300 8400 3300
-Text GLabel 8400 3300 2    50   Input ~ 0
+Text GLabel 8400 3300 2    50   Output ~ 0
 ~LATCH
 Wire Wire Line
 	5200 2600 5850 2600
@@ -271,10 +269,10 @@ Wire Wire Line
 	5200 2800 5850 2800
 NoConn ~ 2000 1450
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D6
 U 1 1 624A499F
 P 4650 5550
-F 0 "D?" H 4650 5767 50  0000 C CNN
+F 0 "D6" H 4650 5767 50  0000 C CNN
 F 1 "1N4148" H 4650 5676 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4650 5375 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4650 5550 50  0001 C CNN
@@ -282,10 +280,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4650 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D7
 U 1 1 624A5DB3
 P 4650 5900
-F 0 "D?" H 4650 6117 50  0000 C CNN
+F 0 "D7" H 4650 6117 50  0000 C CNN
 F 1 "1N4148" H 4650 6026 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4650 5725 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4650 5900 50  0001 C CNN
@@ -293,10 +291,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4650 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D8
 U 1 1 624A74BB
 P 4650 6250
-F 0 "D?" H 4650 6467 50  0000 C CNN
+F 0 "D8" H 4650 6467 50  0000 C CNN
 F 1 "1N4148" H 4650 6376 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4650 6075 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4650 6250 50  0001 C CNN
@@ -304,10 +302,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4650 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D9
 U 1 1 624A8C01
 P 4650 6600
-F 0 "D?" H 4650 6817 50  0000 C CNN
+F 0 "D9" H 4650 6817 50  0000 C CNN
 F 1 "1N4148" H 4650 6726 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4650 6425 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4650 6600 50  0001 C CNN
@@ -315,10 +313,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4650 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D1
 U 1 1 624AA153
 P 3300 5450
-F 0 "D?" H 3300 5667 50  0000 C CNN
+F 0 "D1" H 3300 5667 50  0000 C CNN
 F 1 "1N4148" H 3300 5576 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3300 5275 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3300 5450 50  0001 C CNN
@@ -326,10 +324,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3300 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D2
 U 1 1 624DCA3E
 P 3300 5800
-F 0 "D?" H 3300 6017 50  0000 C CNN
+F 0 "D2" H 3300 6017 50  0000 C CNN
 F 1 "1N4148" H 3300 5926 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3300 5625 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3300 5800 50  0001 C CNN
@@ -337,10 +335,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3300 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D3
 U 1 1 624DCA44
 P 3300 6150
-F 0 "D?" H 3300 6367 50  0000 C CNN
+F 0 "D3" H 3300 6367 50  0000 C CNN
 F 1 "1N4148" H 3300 6276 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3300 5975 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3300 6150 50  0001 C CNN
@@ -348,10 +346,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3300 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D4
 U 1 1 624DCA4A
 P 3300 6500
-F 0 "D?" H 3300 6717 50  0000 C CNN
+F 0 "D4" H 3300 6717 50  0000 C CNN
 F 1 "1N4148" H 3300 6626 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3300 6325 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3300 6500 50  0001 C CNN
@@ -359,10 +357,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3300 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D5
 U 1 1 624DCA50
 P 3300 6850
-F 0 "D?" H 3300 7067 50  0000 C CNN
+F 0 "D5" H 3300 7067 50  0000 C CNN
 F 1 "1N4148" H 3300 6976 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3300 6675 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3300 6850 50  0001 C CNN
@@ -370,10 +368,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3300 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R6
 U 1 1 625055A4
 P 5450 3750
-F 0 "R?" H 5520 3796 50  0000 L CNN
+F 0 "R6" H 5520 3796 50  0000 L CNN
 F 1 "2K2" H 5520 3705 50  0000 L CNN
 F 2 "" V 5380 3750 50  0001 C CNN
 F 3 "~" H 5450 3750 50  0001 C CNN
@@ -491,8 +489,8 @@ Wire Bus Line
 Connection ~ 2750 4750
 Text GLabel 2650 4750 0    50   Input ~ 0
 A[0..15]
-Text GLabel 6800 1450 2    50   Input ~ 0
-MUX1
+Text GLabel 6800 1450 2    50   Output ~ 0
+SHAD_SRAM
 Text Notes 4850 6900 2    50   ~ 0
 This is a large AND gate
 Text Label 3050 5450 2    50   ~ 0
@@ -529,6 +527,10 @@ Wire Wire Line
 	5200 1350 5800 1350
 Wire Wire Line
 	4250 1200 5200 1200
+Wire Wire Line
+	6450 3800 6950 3800
+NoConn ~ 7950 3700
+NoConn ~ 7950 3800
 Wire Bus Line
 	4150 4750 4150 6500
 Wire Bus Line

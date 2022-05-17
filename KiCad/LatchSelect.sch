@@ -3,12 +3,12 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 7
+Sheet 7 8
 Title "Solidisk 128 - Configuration latches and associated logic"
-Date "2022-04-01"
-Rev ""
+Date "2022-05-16"
+Rev "A1"
 Comp ""
-Comment1 ""
+Comment1 "Reverse engineer of Solidisk TwoMeg128 board"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -21,7 +21,7 @@ AR Path="/623840EF/62967F06" Ref="U?"  Part="2"
 AR Path="/6296102F/62967F06" Ref="U2"  Part="2" 
 F 0 "U2" H 3600 1275 50  0000 C CNN
 F 1 "74LS32" H 3600 1184 50  0000 C CNN
-F 2 "" H 3600 950 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3600 950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 3600 950 50  0001 C CNN
 	2    3600 950 
 	1    0    0    -1  
@@ -46,7 +46,7 @@ Wire Wire Line
 	3300 1050 3050 1050
 Wire Wire Line
 	3050 1050 3050 1350
-Text Notes 3600 1250 2    50   ~ 0
+Text Notes 2550 1450 2    50   ~ 0
 Write protect
 Wire Wire Line
 	5750 2050 6300 2050
@@ -62,7 +62,7 @@ AR Path="/623840EF/62967F22" Ref="U?"  Part="1"
 AR Path="/6296102F/62967F22" Ref="U16"  Part="1" 
 F 0 "U16" H 5500 2400 50  0000 C CNN
 F 1 "74LS138" H 5500 2300 50  0000 C CNN
-F 2 "" H 5250 1750 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 5250 1750 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 5250 1750 50  0001 C CNN
 	1    5250 1750
 	1    0    0    -1  
@@ -75,7 +75,7 @@ AR Path="/623840EF/6299E740" Ref="U?"  Part="1"
 AR Path="/6296102F/6299E740" Ref="U20"  Part="1" 
 F 0 "U20" H 4400 4850 50  0000 C CNN
 F 1 "74LS163" H 4400 4750 50  0000 C CNN
-F 2 "" H 4100 4050 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 4100 4050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS163" H 4100 4050 50  0001 C CNN
 	1    4100 4050
 	1    0    0    -1  
@@ -169,23 +169,23 @@ Entry Wire Line
 Entry Wire Line
 	8300 4850 8400 4750
 Text GLabel 8400 4550 0    50   Input ~ 0
-~ROMS
+~ROMCS_0_3
 Wire Wire Line
 	9000 4550 8400 4550
 Text GLabel 6300 1850 2    50   Input ~ 0
-~ROMS
+~ROMCS_0_3
 Text GLabel 6300 2050 2    50   Input ~ 0
-~ROMCS
+~ROMCS_8_11
 Connection ~ 4100 5000
 Text GLabel 6300 1250 2    50   Input ~ 0
-~SRAM
+~SRAM_4_7
 $Comp
 L TTL_74xx:74LS74 U19
 U 1 1 62A2F87F
 P 4000 5950
 F 0 "U19" H 4250 6350 50  0000 C CNN
 F 1 "74LS74" H 4250 6250 50  0000 C CNN
-F 2 "" H 4000 5950 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4000 5950 50  0001 C CNN
 F 3 "74xx/74hc_hct74.pdf" H 4000 5950 50  0001 C CNN
 	1    4000 5950
 	1    0    0    -1  
@@ -206,10 +206,10 @@ Wire Wire Line
 	6850 5600 6850 5650
 Connection ~ 6850 5600
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0110
 U 1 1 62C67D6C
 P 6850 5650
-F 0 "#PWR?" H 6850 5400 50  0001 C CNN
+F 0 "#PWR0110" H 6850 5400 50  0001 C CNN
 F 1 "GND" H 6855 5477 50  0000 C CNN
 F 2 "" H 6850 5650 50  0001 C CNN
 F 3 "" H 6850 5650 50  0001 C CNN
@@ -233,10 +233,10 @@ Wire Wire Line
 	5250 2550 5250 2600
 Connection ~ 5250 2550
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0111
 U 1 1 62CBF1E8
 P 5250 2600
-F 0 "#PWR?" H 5250 2350 50  0001 C CNN
+F 0 "#PWR0111" H 5250 2350 50  0001 C CNN
 F 1 "GND" H 5255 2427 50  0000 C CNN
 F 2 "" H 5250 2600 50  0001 C CNN
 F 3 "" H 5250 2600 50  0001 C CNN
@@ -244,12 +244,12 @@ F 3 "" H 5250 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L TTL_74xx:74LS74 U?
+L TTL_74xx:74LS74 U19
 U 2 1 62CC1A8E
 P 4000 6950
-F 0 "U?" H 4300 7350 50  0000 C CNN
-F 1 "74LS74" H 4300 7250 50  0000 C CNN
-F 2 "" H 4000 6950 50  0001 C CNN
+F 0 "U19" H 4250 7350 50  0000 C CNN
+F 1 "74LS74" H 4250 7250 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4000 6950 50  0001 C CNN
 F 3 "74xx/74hc_hct74.pdf" H 4000 6950 50  0001 C CNN
 	2    4000 6950
 	1    0    0    -1  
@@ -265,16 +265,14 @@ Entry Wire Line
 Text Label 3550 6850 2    50   ~ 0
 D1
 Wire Wire Line
-	3400 5950 3400 6400
-Wire Wire Line
 	3400 6950 3700 6950
 Wire Wire Line
 	3400 5950 3700 5950
 Wire Wire Line
 	6050 1250 6050 1950
 Wire Wire Line
-	3400 6400 2750 6400
-Text GLabel 2750 6400 0    50   Input ~ 0
+	3400 6600 2750 6600
+Text GLabel 2750 6600 0    50   Input ~ 0
 ~SHADOW
 Text Label 3450 2150 0    50   ~ 0
 A14
@@ -301,7 +299,7 @@ AR Path="/623840EF/62E6D9C7" Ref="U?"  Part="3"
 AR Path="/6296102F/62E6D9C7" Ref="U15"  Part="3" 
 F 0 "U15" H 7250 3275 50  0000 C CNN
 F 1 "74LS00" H 7250 3184 50  0000 C CNN
-F 2 "" H 7250 2950 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7250 2950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 7250 2950 50  0001 C CNN
 	3    7250 2950
 	1    0    0    -1  
@@ -311,8 +309,8 @@ L power:+5V #PWR?
 U 1 1 62E98BA3
 P 7950 2800
 AR Path="/623840EF/62E98BA3" Ref="#PWR?"  Part="1" 
-AR Path="/6296102F/62E98BA3" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 7950 2650 50  0001 C CNN
+AR Path="/6296102F/62E98BA3" Ref="#PWR0112"  Part="1" 
+F 0 "#PWR0112" H 7950 2650 50  0001 C CNN
 F 1 "+5V" H 7965 2973 50  0000 C CNN
 F 2 "" H 7950 2800 50  0001 C CNN
 F 3 "" H 7950 2800 50  0001 C CNN
@@ -331,7 +329,7 @@ AR Path="/623840EF/62E98BAB" Ref="U?"  Part="4"
 AR Path="/6296102F/62E98BAB" Ref="U15"  Part="4" 
 F 0 "U15" H 8350 3375 50  0000 C CNN
 F 1 "74LS00" H 8350 3284 50  0000 C CNN
-F 2 "" H 8350 3050 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8350 3050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 8350 3050 50  0001 C CNN
 	4    8350 3050
 	1    0    0    -1  
@@ -341,7 +339,7 @@ Wire Wire Line
 Wire Wire Line
 	8650 3050 8950 3050
 Text GLabel 8950 3050 2    50   Output ~ 0
-~SRAMH
+~SRAM_12_15
 Wire Wire Line
 	7350 3850 8500 3850
 Wire Wire Line
@@ -377,10 +375,10 @@ Connection ~ 6850 3450
 Wire Wire Line
 	6850 3350 6850 3450
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0113
 U 1 1 62F2BFD3
 P 6850 3350
-F 0 "#PWR?" H 6850 3200 50  0001 C CNN
+F 0 "#PWR0113" H 6850 3200 50  0001 C CNN
 F 1 "+5V" H 6865 3523 50  0000 C CNN
 F 2 "" H 6850 3350 50  0001 C CNN
 F 3 "" H 6850 3350 50  0001 C CNN
@@ -434,7 +432,7 @@ AR Path="/623840EF/6299E746" Ref="U?"  Part="1"
 AR Path="/6296102F/6299E746" Ref="U21"  Part="1" 
 F 0 "U21" H 7100 5350 50  0000 C CNN
 F 1 "74LS157" H 7150 5250 50  0000 C CNN
-F 2 "" H 6850 4450 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 6850 4450 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS157" H 6850 4450 50  0001 C CNN
 	1    6850 4450
 	1    0    0    -1  
@@ -447,59 +445,34 @@ Wire Wire Line
 	4300 6850 5050 6850
 Wire Wire Line
 	4600 3850 5050 3850
-Text Notes 8800 4050 0    50   ~ 0
-Address lines back to BBC\nmotherboard via CPU socket
+Text Notes 8800 4200 0    50   ~ 0
+Address lines back to BBC\nmotherboard via CPU socket\nOnboard RAM deselected by\noutputting addresses in\nsideways RAM area.
 Wire Wire Line
 	3600 4550 3000 4550
-$Comp
-L power:+5V #PWR?
-U 1 1 6301E7EE
-P 3000 3900
-F 0 "#PWR?" H 3000 3750 50  0001 C CNN
-F 1 "+5V" H 3015 4073 50  0000 C CNN
-F 2 "" H 3000 3900 50  0001 C CNN
-F 3 "" H 3000 3900 50  0001 C CNN
-	1    3000 3900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2750 4050 3600 4050
-Wire Wire Line
-	3000 3900 3000 4550
 Text GLabel 2750 4050 0    50   Input ~ 0
 ~LATCH
 Wire Wire Line
 	3300 6850 3700 6850
 Wire Wire Line
-	3400 6950 3400 6400
-Connection ~ 3400 6400
+	3400 6950 3400 6600
 Wire Wire Line
 	5050 4750 5050 6850
 Wire Wire Line
-	4000 6250 4000 6350
-Wire Wire Line
-	4000 6350 3650 6350
-Wire Wire Line
-	3650 6350 3650 7350
-Wire Wire Line
-	3650 7350 4000 7350
-Wire Wire Line
 	4000 7350 4000 7250
-Wire Wire Line
-	3650 7350 3300 7350
-Connection ~ 3650 7350
 Text Notes 8950 2900 0    50   ~ 0
 Selects Sideways RAM\nin banks 12-15
 Text Notes 6300 1100 0    50   ~ 0
 Selects Sideways RAM\nin banks 4-7
 Text Notes 6300 2350 0    50   ~ 0
-Selects Sidewas ROMs\nin banks 8-11
+Selects Sideways ROMs\nin banks 8-11
 Text Notes 6300 1700 0    50   ~ 0
 Selects Sideways ROMs\nin banks 0-3. Thes are on\nthe BBC Micro motherboard.
 Wire Wire Line
 	5250 6050 4900 6050
 Text GLabel 4900 6050 0    50   Input ~ 0
-MUX1
+SHAD_SRAM
 $Comp
 L TTL_74xx:74LS00 U?
 U 3 1 62596950
@@ -509,7 +482,7 @@ AR Path="/6296102F/62596950" Ref="U18"  Part="3"
 AR Path="/62DE24C7/62596950" Ref="U?"  Part="3" 
 F 0 "U18" H 5550 6275 50  0000 C CNN
 F 1 "74LS00" H 5550 6184 50  0000 C CNN
-F 2 "" H 5550 5950 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5550 5950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 5550 5950 50  0001 C CNN
 	3    5550 5950
 	1    0    0    -1  
@@ -522,16 +495,96 @@ Wire Wire Line
 	6050 5950 5850 5950
 Connection ~ 6050 5050
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0115
 U 1 1 625A5491
 P 4100 5150
-F 0 "#PWR?" H 4100 4900 50  0001 C CNN
+F 0 "#PWR0115" H 4100 4900 50  0001 C CNN
 F 1 "GND" H 4105 4977 50  0000 C CNN
 F 2 "" H 4100 5150 50  0001 C CNN
 F 3 "" H 4100 5150 50  0001 C CNN
 	1    4100 5150
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+5V #PWR0116
+U 1 1 625A9F91
+P 4100 3250
+F 0 "#PWR0116" H 4100 3100 50  0001 C CNN
+F 1 "+5V" H 4115 3423 50  0000 C CNN
+F 2 "" H 4100 3250 50  0001 C CNN
+F 3 "" H 4100 3250 50  0001 C CNN
+	1    4100 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0117
+U 1 1 625AA8AB
+P 5250 1150
+F 0 "#PWR0117" H 5250 1000 50  0001 C CNN
+F 1 "+5V" H 5265 1323 50  0000 C CNN
+F 2 "" H 5250 1150 50  0001 C CNN
+F 3 "" H 5250 1150 50  0001 C CNN
+	1    5250 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 CON3
+U 1 1 62897D8D
+P 2650 1350
+F 0 "CON3" H 2568 1567 50  0000 C CNN
+F 1 "PinHdr" H 2568 1476 50  0000 C CNN
+F 2 "" H 2650 1350 50  0001 C CNN
+F 3 "~" H 2650 1350 50  0001 C CNN
+	1    2650 1350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 1350 2850 1350
+Wire Wire Line
+	2850 1450 3050 1450
+Wire Wire Line
+	3050 1450 3050 1650
+$Comp
+L power:GND #PWR0118
+U 1 1 628A868C
+P 3050 1650
+F 0 "#PWR0118" H 3050 1400 50  0001 C CNN
+F 1 "GND" H 3055 1477 50  0000 C CNN
+F 2 "" H 3050 1650 50  0001 C CNN
+F 3 "" H 3050 1650 50  0001 C CNN
+	1    3050 1650
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4300 6050
+NoConn ~ 4000 5650
+NoConn ~ 4000 6650
+Wire Wire Line
+	3000 6350 4000 6350
+Connection ~ 3400 6600
+Wire Wire Line
+	3400 5950 3400 6600
+Wire Wire Line
+	4000 6250 4000 6350
+Wire Wire Line
+	3000 4550 3000 6350
+Wire Wire Line
+	3000 7350 3000 6350
+Wire Wire Line
+	3000 7350 4000 7350
+Connection ~ 3000 6350
+Wire Wire Line
+	3000 4550 2750 4550
+Connection ~ 3000 4550
+Text GLabel 2750 4550 0    50   Input ~ 0
+~RES
+NoConn ~ 5750 1450
+NoConn ~ 5750 1550
+NoConn ~ 5750 1650
+NoConn ~ 5750 1750
+NoConn ~ 4600 4050
+NoConn ~ 4300 7050
+Wire Wire Line
+	3600 4350 2750 4350
 Wire Bus Line
 	3200 1750 3200 2900
 Wire Bus Line
@@ -542,26 +595,6 @@ Wire Bus Line
 	7800 4550 7800 5100
 Wire Bus Line
 	3200 3300 3200 6750
-$Comp
-L power:+5V #PWR?
-U 1 1 625A9F91
-P 4100 3250
-F 0 "#PWR?" H 4100 3100 50  0001 C CNN
-F 1 "+5V" H 4115 3423 50  0000 C CNN
-F 2 "" H 4100 3250 50  0001 C CNN
-F 3 "" H 4100 3250 50  0001 C CNN
-	1    4100 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 625AA8AB
-P 5250 1150
-F 0 "#PWR?" H 5250 1000 50  0001 C CNN
-F 1 "+5V" H 5265 1323 50  0000 C CNN
-F 2 "" H 5250 1150 50  0001 C CNN
-F 3 "" H 5250 1150 50  0001 C CNN
-	1    5250 1150
-	1    0    0    -1  
-$EndComp
+Text GLabel 2750 4350 0    50   Input ~ 0
+~RAMWE
 $EndSCHEMATC

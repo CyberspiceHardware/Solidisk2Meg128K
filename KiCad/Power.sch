@@ -1,0 +1,183 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 8
+Title ""
+Date "2022-05-16"
+Rev "A1"
+Comp ""
+Comment1 "Reverse engineer of Solidisk TwoMeg128 board"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TTL_74xx:74LS123 U1
+U 3 1 6288BD1E
+P 2400 2400
+F 0 "U1" H 2630 2446 50  0000 L CNN
+F 1 "74LS123" H 2630 2355 50  0000 L CNN
+F 2 "" H 2400 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS123" H 2400 2400 50  0001 C CNN
+	3    2400 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0119
+U 1 1 6288D0B0
+P 2400 3050
+F 0 "#PWR0119" H 2400 2800 50  0001 C CNN
+F 1 "GND" H 2405 2877 50  0000 C CNN
+F 2 "" H 2400 3050 50  0001 C CNN
+F 3 "" H 2400 3050 50  0001 C CNN
+	1    2400 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0120
+U 1 1 6288DD3E
+P 2400 1750
+F 0 "#PWR0120" H 2400 1600 50  0001 C CNN
+F 1 "+5V" H 2415 1923 50  0000 C CNN
+F 2 "" H 2400 1750 50  0001 C CNN
+F 3 "" H 2400 1750 50  0001 C CNN
+	1    2400 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1750 2400 1800
+Wire Wire Line
+	2400 2900 2400 3000
+$Comp
+L TTL_74xx:74LS32 U2
+U 5 1 6288E1C4
+P 3200 2400
+F 0 "U2" H 3430 2446 50  0000 L CNN
+F 1 "74LS32" H 3430 2355 50  0000 L CNN
+F 2 "" H 3200 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 3200 2400 50  0001 C CNN
+	5    3200 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1800 3200 1800
+Wire Wire Line
+	3200 1800 3200 1900
+Connection ~ 2400 1800
+Wire Wire Line
+	2400 1800 2400 1900
+Wire Wire Line
+	2400 3000 3200 3000
+Connection ~ 2400 3000
+Wire Wire Line
+	2400 3000 2400 3050
+Wire Wire Line
+	3200 3000 3200 2900
+$Comp
+L TTL_74xx:74LS00 U15
+U 5 1 62908978
+P 4750 2400
+F 0 "U15" H 4980 2446 50  0000 L CNN
+F 1 "74LS00" H 4980 2355 50  0000 L CNN
+F 2 "" H 4750 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 4750 2400 50  0001 C CNN
+	5    4750 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 2900 4750 3000
+Wire Wire Line
+	4750 1900 4750 1800
+$Comp
+L TTL_74xx:74LS139 U14
+U 3 1 6291098B
+P 3950 2400
+F 0 "U14" H 4180 2446 50  0000 L CNN
+F 1 "74LS139" H 4180 2355 50  0000 L CNN
+F 2 "" H 3950 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74ls139a.pdf" H 3950 2400 50  0001 C CNN
+	3    3950 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 2900 3950 3000
+Wire Wire Line
+	3950 1900 3950 1800
+Connection ~ 3200 1800
+Connection ~ 3200 3000
+Connection ~ 3950 1800
+Connection ~ 3950 3000
+Connection ~ 4750 1800
+Connection ~ 4750 3000
+Wire Wire Line
+	3200 3000 3950 3000
+Wire Wire Line
+	3200 1800 3950 1800
+Wire Wire Line
+	3950 1800 4750 1800
+Wire Wire Line
+	3950 3000 4750 3000
+Wire Wire Line
+	4750 3000 5500 3000
+Wire Wire Line
+	4750 1800 5500 1800
+$Comp
+L TTL_74xx:74LS02 U17
+U 5 1 62937809
+P 5500 2400
+F 0 "U17" H 5730 2446 50  0000 L CNN
+F 1 "74LS02" H 5730 2355 50  0000 L CNN
+F 2 "" H 5500 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 5500 2400 50  0001 C CNN
+	5    5500 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1900 5500 1800
+Connection ~ 5500 1800
+Wire Wire Line
+	5500 1800 6250 1800
+Wire Wire Line
+	5500 2900 5500 3000
+Connection ~ 5500 3000
+Wire Wire Line
+	5500 3000 6250 3000
+$Comp
+L TTL_74xx:74LS00 U18
+U 5 1 6293C2AC
+P 6250 2400
+F 0 "U18" H 6480 2446 50  0000 L CNN
+F 1 "74LS00" H 6480 2355 50  0000 L CNN
+F 2 "" H 6250 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 6250 2400 50  0001 C CNN
+	5    6250 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 1900 6250 1800
+Connection ~ 6250 1800
+Wire Wire Line
+	6250 1800 7000 1800
+Wire Wire Line
+	6250 2900 6250 3000
+Connection ~ 6250 3000
+Wire Wire Line
+	6250 3000 7000 3000
+$Comp
+L TTL_74xx:74LS74 U19
+U 3 1 6293FB13
+P 7000 2400
+F 0 "U19" H 7230 2446 50  0000 L CNN
+F 1 "74LS74" H 7230 2355 50  0000 L CNN
+F 2 "" H 7000 2400 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 7000 2400 50  0001 C CNN
+	3    7000 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 2000 7000 1800
+Wire Wire Line
+	7000 2800 7000 3000
+$EndSCHEMATC
